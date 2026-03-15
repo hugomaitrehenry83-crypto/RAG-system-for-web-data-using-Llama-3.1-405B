@@ -1,0 +1,48 @@
+# ─────────────────────────────────────────
+#  RAG Web System — Configuration
+# ─────────────────────────────────────────
+
+# URLs to index into the knowledge base
+urls:
+  - "https://en.wikipedia.org/wiki/LangChain"
+  - "https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+  - "https://en.wikipedia.org/wiki/Large_language_model"
+
+# Text splitting parameters
+chunking:
+  chunk_size: 512
+  chunk_overlap: 50
+
+# Retrieval parameters
+retriever:
+  k: 4                    # number of chunks to retrieve per query
+  search_type: similarity  # "similarity" or "mmr" (max marginal relevance)
+
+# LLM settings
+llm:
+  provider: ollama        # "ollama" or "openai"
+  model: llama3           # ollama: llama3, mistral | openai: gpt-4o, gpt-3.5-turbo
+  temperature: 0.0        # 0.0 = deterministic, 1.0 = creative
+  max_tokens: 512
+
+# Embedding model
+embeddings:
+  provider: ollama        # "ollama" or "openai"
+  model: nomic-embed-text # ollama: nomic-embed-text | openai: text-embedding-3-small
+
+# ChromaDB vectorstore
+vectorstore:
+  persist_dir: ./data/chroma_db
+  collection_name: rag_collection
+
+# Prompt template
+prompt_template: |
+  You are a helpful assistant. Use ONLY the context below to answer the question.
+  If the answer is not in the context, say "I don't have enough information to answer that."
+
+  Context:
+  {context}
+
+  Question: {question}
+
+  Answer:
