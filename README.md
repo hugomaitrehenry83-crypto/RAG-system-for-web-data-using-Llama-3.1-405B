@@ -1,4 +1,4 @@
-# 🔍 RAG System for Web Data
+#  RAG System for Web Data
 
 A production-ready **Retrieval-Augmented Generation (RAG)** system that answers questions grounded in real web content — built with LangChain, ChromaDB, and open-source LLMs via Ollama.
 
@@ -9,7 +9,7 @@ A production-ready **Retrieval-Augmented Generation (RAG)** system that answers 
 
 ---
 
-## 📌 What is RAG?
+##  What is RAG?
 
 Large Language Models have a knowledge cutoff and can hallucinate facts. RAG solves this by:
 
@@ -35,7 +35,7 @@ User question
 
 ---
 
-## 🚀 Features
+##  Features
 
 - **Modular architecture** — swap any component (LLM, embeddings, vectorstore)
 - **Web ingestion** — load and index any public URL
@@ -47,7 +47,7 @@ User question
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 rag-web-system/
@@ -75,7 +75,7 @@ rag-web-system/
 
 ---
 
-## ⚙️ Setup
+##  Setup
 
 ### 1. Clone & install
 
@@ -100,7 +100,7 @@ Edit `config.yaml` to set your URLs, chunk size, model name, etc.
 
 ---
 
-## 💬 Usage
+##  Usage
 
 ### Index URLs and ask a question
 
@@ -122,7 +122,7 @@ OPENAI_API_KEY=sk-... python main.py --llm openai --question "What is RAG?"
 
 ---
 
-## 🧠 How It Works — Step by Step
+##  How It Works — Step by Step
 
 | Step | Module | Description |
 |------|--------|-------------|
@@ -134,7 +134,7 @@ OPENAI_API_KEY=sk-... python main.py --llm openai --question "What is RAG?"
 
 ---
 
-## 🔧 Configuration (`config.yaml`)
+##  Configuration (`config.yaml`)
 
 ```yaml
 urls:
@@ -165,7 +165,7 @@ vectorstore:
 
 ---
 
-## 🧪 Running Tests
+##  Running Tests
 
 ```bash
 pytest tests/ -v
@@ -173,7 +173,7 @@ pytest tests/ -v
 
 ---
 
-## 📊 Example Output
+##  Example Output
 
 ```
 Question: What is Retrieval-Augmented Generation?
@@ -193,7 +193,7 @@ Sources:
 
 ---
 
-## 🔌 Extending the System
+##  Extending the System
 
 **Add a new data source:**
 ```python
@@ -212,7 +212,7 @@ llm:
 
 ---
 
-## 📚 References
+##  References
 
 - [LangChain documentation](https://python.langchain.com/)
 - [ChromaDB documentation](https://docs.trychroma.com/)
@@ -221,6 +221,3 @@ llm:
 
 ---
 
-## 📝 License
-
-MIT — free to use, modify, and distribute.
